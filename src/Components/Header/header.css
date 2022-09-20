@@ -1,0 +1,35 @@
+header {
+  height: 100px;
+  background-color: #60A692;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header_logo_img {
+  max-width: 100px;
+}
+
+.header_nav_link_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 37px;
+  list-style-type: none;
+}
+
+.header_nav_link p {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  opacity: 0.8;
+}
+
+.header_nav_link p:hover {
+  cursor: pointer;
+}
+
+p.active {
+  opacity: 1;
+  border-bottom: 1px solid #fff;
+}
