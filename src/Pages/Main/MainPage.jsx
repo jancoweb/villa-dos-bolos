@@ -1,14 +1,14 @@
-import Header from "../Components/Header"
-import './pageStyles.css';
-import MainImg from '../../assets/main_page_img.png';
-import Onboard from '../../assets/onboard_img.png';
-import OnboardIconClick from '../../assets/onboard_click.svg';
-import OnboardIconContact from '../../assets/onboard_contact.png';
+import Header from "../../../src/Components/Header"
+import '../pageStyles.css';
+import MainImg from '../../../assets/main_page_img.png';
+import Onboard from '../../../assets/onboard_img.png';
+import OnboardIconClick from '../../../assets/onboard_click.svg';
+import OnboardIconContact from '../../../assets/onboard_contact.png';
 import { useNavigate } from "react-router-dom";
-import Showcase from "../Components/Showcase";
-import InstaLogoGreen from '../../assets/instagram_green.svg'
-import PhoneLogoGreen from '../../assets/phone_green.svg'
-import Footer from "../Components/Footer";
+import Showcase from "../../../src/Components/Showcase";
+import InstaLogoGreen from '../../../assets/instagram_green.svg'
+import PhoneLogoGreen from '../../../assets/phone_green.svg'
+import Footer from "../../../src/Components/Footer";
 
 function MainPage() {
 

@@ -4,9 +4,9 @@ import {
   Route,
   Navigate
 } from 'react-router-dom';
-import ContactPage from './Pages/Contact';
-import MainPage from './Pages/MainPage';
-import ProductsPage from './Pages/Products';
+import ContactPage from './Pages/Contact/Contact';
+import MainPage from './Pages/Main/MainPage';
+import ProductsPage from './Pages/Products/Products';
 
 function MyRoutes() {
   return (
@@ -14,7 +14,8 @@ function MyRoutes() {
       <Router>
         <Routes>
           <Route path='/' element={<MainPage />} />
-          <Route path='/produtos' element={<ProductsPage />} />
+          <Route path='/produtos' element={<ProductsPage />}>
+          </Route>
           <Route path='/contato' element={<ContactPage />} />
         </Routes>
       </Router>
