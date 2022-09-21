@@ -15,14 +15,14 @@ export default function Showcase() {
     <>
       {productsType.map((product) => {
         return (
-          <div className="showcase_item" key={product.id}>
+          <div className="showcase_item" onClick={() => navigate('/produtos')} key={product.id}>
             <div className="item_img_container">
               <img src={product.img} />
             </div>
             <div className="item_text_container">
               <h3>{product.name}</h3>
               <p className="small">Ut consequat nibh diam, a pulvinar tellus bibendum eget. Vivamus lorem nunc, lacinia sit amet faucibus eu, semper a ante. </p>
-              <button onClick={() => navigate('/produtos')} className='mid'>Saiba mais</button>
+              <button className='mid'>Saiba mais</button>
             </div>
           </div>
         )

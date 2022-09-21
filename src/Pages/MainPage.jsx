@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import Showcase from "../Components/Showcase";
 import InstaLogoGreen from '../../assets/instagram_green.svg'
 import PhoneLogoGreen from '../../assets/phone_green.svg'
+import Footer from "../Components/Footer";
 
 function MainPage() {
 
@@ -70,12 +71,13 @@ function MainPage() {
           <div className="franchise">
             <p className="mid" style={{ fontWeight: 'bold' }}>Seja um franqueado</p>
             <div className="infos">
-              <p className="small">Ut consequat nibh diam, a pulvinar tellus bibendum eget. Vivamus lorem nunc, . Quisque eleifend, odio eu tristique rutrum, nisi diam gravida justo,.</p>
+              <p className="small" style={{ fontSize: '18px' }}>Ut consequat nibh diam, a pulvinar tellus bibendum eget. Vivamus lorem nunc, . Quisque eleifend, odio eu tristique rutrum, nisi diam gravida justo,.</p>
               <button className="mid">Seja um franqueado</button>
             </div>
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   )
 }

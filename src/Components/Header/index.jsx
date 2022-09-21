@@ -9,7 +9,7 @@ export default function Header({ active }) {
   return (
     <header>
       <div className="header_logo_container">
-        <img src={LOGO} className="header_logo_img" />
+        <img src={LOGO} onClick={() => navigate('/')} className="header_logo_img" />
       </div>
       <div className="header_nav_continer">
         <ul className='header_nav_link_container'>

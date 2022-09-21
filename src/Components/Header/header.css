@@ -10,6 +10,14 @@ header {
   max-width: 100px;
 }
 
+header p:hover {
+  opacity: 1;
+}
+
+.header_logo_img:hover {
+  cursor: pointer;
+}
+
 .header_nav_link_container {
   display: flex;
   align-items: center;

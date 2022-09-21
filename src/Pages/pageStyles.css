@@ -2,6 +2,7 @@
 
 :root {
   --main-color: #591414;
+  --quicksand: 'quicksand'
 }
 
 h1 {
@@ -62,11 +63,6 @@ h3 {
   box-shadow: 4px 4px 12px rgba(175, 203, 195, 0.7);
   ;
   width: 444px;
-}
-
-.main_content_container button:hover {
-  background-color: #fff;
-  color: #60A692;
 }
 
 button:hover {
@@ -145,6 +141,16 @@ section.showcase_content_container {
   border-radius: 8px;
 }
 
+.showcase_item:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  color: #fff;
+}
+
+.showcase_item:hover button {
+  color: #fff;
+}
+
 .item_text_container {
   padding: 10px;
 }
@@ -155,10 +161,6 @@ section.showcase_content_container {
   color: var(--main-color);
   font-weight: bold;
   margin-left: 10px;
-}
-
-.item_text_container button:hover {
-  color: #fff;
 }
 
 .item_text_container p {
