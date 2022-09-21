@@ -22,6 +22,6 @@ ul.product_nav_list li:hover {
   cursor: pointer;
 }
 
-.active {
+ul.product_nav_list li.active {
   opacity: 1;
 }
