@@ -79,9 +79,3 @@ ul.product_nav_list li.active {
   justify-content: center;
   gap: 40px;
 }
-
-.infos {}
-
-.infos_header_container {
-  text-align: center;
-}
