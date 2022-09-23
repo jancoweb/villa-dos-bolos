@@ -19,8 +19,12 @@ h2 {
 
 h3 {
   font-family: 'Pacifico';
-  font-size: 48px;
+  font-size: 46px;
   color: var(--main-color);
+}
+
+h3.item_name {
+  font-size: 32px;
 }
 
 .header {
