@@ -1,5 +1,5 @@
-import InstaLogoGreen from '../../../assets/instagram_green.svg'
-import PhoneLogoGreen from '../../../assets/phone_green.svg'
+import InstaLogoGreen from '../../../assets/instagram_green.svg';
+import PhoneLogoGreen from '../../../assets/phone_green.svg';
 export default function ContactContainer() {
   return (
     <>
