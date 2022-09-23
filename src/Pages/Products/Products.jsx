@@ -3,8 +3,8 @@ import Footer from "../../Components/Footer";
 import './productStyle.css';
 import { useEffect, useState } from "react";
 import bolos from "../../Components/ProductsArr/bolos";
-import arrowIcon from '../../../assets/arrow_forward.png'
-
+import arrowIcon from '../../../assets/arrow_forward.png';
+import ContactContainer from "../../Components/ContactContainer";
 export default function ProductsPage() {
 
   const [active, setActive] = useState('');
@@ -51,6 +51,7 @@ export default function ProductsPage() {
             })
           }
         </div>
+        <ContactContainer />
       </div>
       <Footer />
     </>
