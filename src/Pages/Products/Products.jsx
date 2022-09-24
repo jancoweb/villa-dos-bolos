@@ -55,7 +55,7 @@ export default function ProductsPage() {
                   <div className="item_img_container">
                     <img src={produto.img} alt="" />
                   </div>
-                  <div className="item_content_container">
+                  <div className="product_item_content_container">
                     <h3 className="item_name">{produto.nome}</h3>
                     <p className="mid">Saiba mais <img src={arrowIcon} alt="" /></p>
                   </div>
