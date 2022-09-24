@@ -52,7 +52,7 @@ export default function ProductsPage() {
             produtos && produtos.map((produto) => {
               return (
                 <div className="item" key={produto.id}>
-                  <div className="item_img_container">
+                  <div className="product_item_img_container">
                     <img src={produto.img} alt="" />
                   </div>
                   <div className="product_item_content_container">

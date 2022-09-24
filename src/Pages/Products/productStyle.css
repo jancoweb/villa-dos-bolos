@@ -66,14 +66,14 @@ ul.product_nav_list li.active {
   width: 260px;
 }
 
-.item_content_container {
+.product_item_content_container {
   padding: 11px 0px 33px 31px;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.item_content_container p {
+.product_item_content_container p {
   display: flex;
   align-items: center;
   justify-content: center;
