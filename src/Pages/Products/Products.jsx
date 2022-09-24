@@ -2,9 +2,10 @@ import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import './productStyle.css';
 import { useEffect, useState } from "react";
-import bolos from "../../Components/ProductsArr/bolos";
+// import bolos from "../../Components/ProductsArr/bolos";
 import arrowIcon from '../../../assets/arrow_forward.png';
 import ContactContainer from "../../Components/ContactContainer";
+import api from "../../services/api";
 export default function ProductsPage() {
 
   const [active, setActive] = useState('');
@@ -15,10 +16,22 @@ export default function ProductsPage() {
     setActive(e.target.innerHTML.toLowerCase());
 
   }
-  useEffect(() => {
-    if (active == 'bolos') return setProdutos(bolos)
 
-    return setProdutos([])
+  useEffect(() => {
+    async function handlePopulate() {
+      let id = 0;
+      if (active == 'bolos') id = 1;
+      if (active == 'tortas') id = 2;
+      if (active == 'vulcões') id = 3;
+      if (active == 'taça de bolo') id = 4;
+      try {
+        const res = await api.get(`/produto/tipo/${id}`);
+        setProdutos(res.data)
+      } catch (error) {
+        console.log(error.message)
+      }
+    }
+    handlePopulate()
   }, [active])
 
 
