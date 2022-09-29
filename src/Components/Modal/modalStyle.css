@@ -1,0 +1,72 @@
+.modal_box {
+  width: 1000px;
+  height: 768px;
+  position: relative;
+  background-color: #fff;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 100px 150px 100px;
+}
+
+.modal_box p img {
+  margin-left: 840px;
+}
+
+.modal_text_container {
+  max-width: 995px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 80px;
+}
+
+.form_container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.form_container form input {
+  width: 382px;
+  height: 48px;
+  padding: 19px 0 19px 30px;
+  background-color: #F9C9DE;
+  border: none;
+  border-radius: 8px;
+}
+
+.input_container {
+  width: 995px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 31px;
+}
+
+.input_container button {
+  width: 382px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background-color: #60A692;
+  color: #fff;
+}
+
+
+.modal_bg {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 1640px;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(87, 20, 20, 0.5);
+}

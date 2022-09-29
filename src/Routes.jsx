@@ -1,16 +1,16 @@
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Navigate
+  Route
 } from 'react-router-dom';
+import ContextProvider from './Components/GlobalContext/context';
 import ContactPage from './Pages/Contact/Contact';
 import MainPage from './Pages/Main/MainPage';
 import ProductsPage from './Pages/Products/Products';
 
 function MyRoutes() {
   return (
-    <div className="Routes">
+    <ContextProvider>
       <Router>
         <Routes>
           <Route path='/' element={<MainPage />} />
@@ -19,7 +19,8 @@ function MyRoutes() {
           <Route path='/contato' element={<ContactPage />} />
         </Routes>
       </Router>
-    </div>
+    </ContextProvider>
+
   )
 }
 

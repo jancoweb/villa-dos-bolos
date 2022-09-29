@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import InstaLogoGreen from '../../../assets/instagram_green.svg';
 import PhoneLogoGreen from '../../../assets/phone_green.svg';
 export default function ContactContainer() {
+  const navigate = useNavigate()
   return (
     <>
       <section className="main_page_contact_container">
@@ -20,7 +22,7 @@ export default function ContactContainer() {
             <p className="mid" style={{ fontWeight: 'bold' }}>Seja um franqueado</p>
             <div className="infos">
               <p className="small" style={{ fontSize: '18px' }}>Ut consequat nibh diam, a pulvinar tellus bibendum eget. Vivamus lorem nunc, . Quisque eleifend, odio eu tristique rutrum, nisi diam gravida justo,.</p>
-              <button className="mid">Seja um franqueado</button>
+              <button className="mid" onClick={() => navigate('/contato')}>Seja um franqueado</button>
             </div>
           </div>
         </div>
