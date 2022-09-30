@@ -15,6 +15,7 @@ ul.product_nav_list li {
   border-bottom: 12px solid #60A692;
   opacity: 0.6;
   color: #60A692;
+  font-family: 'Pacifico';
 }
 
 ul.product_nav_list li:hover {
