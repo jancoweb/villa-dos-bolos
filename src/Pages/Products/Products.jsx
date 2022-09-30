@@ -2,13 +2,15 @@ import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import './productStyle.css';
 import { useEffect, useState } from "react";
-// import bolos from "../../Components/ProductsArr/bolos";
 import arrowIcon from '../../../assets/arrow_forward.png';
 import ContactContainer from "../../Components/ContactContainer";
 import api from "../../services/api";
+import { useGlobalContext } from "../../Components/GlobalContext/useContext";
+
 export default function ProductsPage() {
 
-  const [active, setActive] = useState('');
+
+  const { active, setActive } = useGlobalContext();
   const [produtos, setProdutos] = useState([])
 
   function handleSelection(e) {
@@ -32,7 +34,7 @@ export default function ProductsPage() {
       }
     }
     handlePopulate()
-  }, [active])
+  }, [active]);
 
 
   return (
