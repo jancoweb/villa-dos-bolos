@@ -6,17 +6,29 @@ import arrowIcon from '../../../assets/arrow_forward.png';
 import ContactContainer from "../../Components/ContactContainer";
 import api from "../../services/api";
 import { useGlobalContext } from "../../Components/GlobalContext/useContext";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductsPage() {
 
-
+  const navigate = useNavigate();
   const { active, setActive } = useGlobalContext();
-  const [produtos, setProdutos] = useState([])
+  const { itemPage, setItemPage } = useGlobalContext();
+  const [produtos, setProdutos] = useState([]);
 
   function handleSelection(e) {
     setActive('');
     setActive(e.target.innerHTML.toLowerCase());
 
+  }
+
+  async function handleItem(id){
+    try {
+      const res = await api.get(`/produto/${id}`);
+      setItemPage(res.data);
+      return navigate(`/produtos/${id}`);
+    } catch(error){
+      return error.message
+    }
   }
 
   useEffect(() => {
@@ -30,7 +42,7 @@ export default function ProductsPage() {
         const res = await api.get(`/produto/tipo/${id}`);
         setProdutos(res.data)
       } catch (error) {
-        console.log(error.message)
+        return error.message
       }
     }
     handlePopulate()
@@ -53,7 +65,7 @@ export default function ProductsPage() {
           {
             produtos && produtos.map((produto) => {
               return (
-                <div className="item" key={produto.id}>
+                <div className="item" key={produto.id} onClick={()=>{navigate(`/produtos/${produto.id}`)}}>
                   <div className="product_item_img_container">
                     <img src={produto.img} alt="" />
                   </div>
