@@ -11,7 +11,7 @@ import Hashtag from '../../../assets/hash.png'
 export default function ItemPage() {
   const navigate = useNavigate()
   const { itemPage } = useGlobalContext();
-  console.log(itemPage)
+
   return (
     <>
       <Header />
