@@ -1,13 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../GlobalContext/useContext";
 
 
 export default function ItemNav() {
+
+  const navigate = useNavigate()
 
   const { active, setActive } = useGlobalContext()
 
   function handleSelection(e) {
     setActive("");
     setActive(e.target.innerHTML.toLowerCase());
+    navigate('/produtos')
   }
 
   return (
