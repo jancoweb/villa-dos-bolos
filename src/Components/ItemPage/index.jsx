@@ -25,6 +25,7 @@ export default function ItemPage() {
           <div className="item_page_head_text">
             <h2>{itemPage.nome}</h2>
             <p className="mid">O sucesso da Villa!</p>
+            <br />
             <p className="small">{itemPage.description}</p>
           </div>
         </div>
