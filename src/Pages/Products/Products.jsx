@@ -7,17 +7,13 @@ import ContactContainer from "../../Components/ContactContainer";
 import api from "../../services/api";
 import { useGlobalContext } from "../../Components/GlobalContext/useContext";
 import { useNavigate } from "react-router-dom";
+import ItemNav from "../../Components/ItemNav";
 
 export default function ProductsPage() {
   const navigate = useNavigate();
-  const { active, setActive } = useGlobalContext();
+  const { active } = useGlobalContext();
   const { setItemPage } = useGlobalContext();
   const [produtos, setProdutos] = useState([]);
-
-  function handleSelection(e) {
-    setActive("");
-    setActive(e.target.innerHTML.toLowerCase());
-  }
 
   async function handleItem(id) {
     try {
@@ -50,30 +46,7 @@ export default function ProductsPage() {
     <>
       <Header active="products" />
       <div className="products_container">
-        <nav>
-          <ul className="product_nav_list">
-            <li
-              onClick={(e) => handleSelection(e)}
-              className={active == "bolos" ? "active" : null}>
-              Bolos
-            </li>
-            <li
-              onClick={(e) => handleSelection(e)}
-              className={active == "tortas" ? "active" : null}>
-              Tortas
-            </li>
-            <li
-              onClick={(e) => handleSelection(e)}
-              className={active == "vulcões" ? "active" : null}>
-              Vulcões
-            </li>
-            <li
-              onClick={(e) => handleSelection(e)}
-              className={active == "taça de bolo" ? "active" : null}>
-              Taça de bolo
-            </li>
-          </ul>
-        </nav>
+        <ItemNav />
         <div className="item_list_container">
           {produtos &&
             produtos.map((produto) => {

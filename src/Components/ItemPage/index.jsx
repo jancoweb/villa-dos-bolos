@@ -2,14 +2,20 @@ import ContactContainer from "../ContactContainer";
 import Footer from "../Footer";
 import { useGlobalContext } from "../GlobalContext/useContext";
 import Header from "../Header";
+import ItemNav from "../ItemNav";
+import Arrow_back from '../../../assets/arrow_back.png'
 import "./itemStyle.css";
+import { useNavigate } from "react-router-dom";
 
 export default function ItemPage() {
+  const navigate = useNavigate()
   const { itemPage } = useGlobalContext();
   console.log(itemPage)
   return (
     <>
       <Header />
+      <ItemNav />
+      <p className="arrow_back" onClick={() => { navigate('/produtos') }}><img src={Arrow_back} alt="" /></p>
       <div className="item_page_container">
         <div className="item_page_head_content">
           <div className="item_page_head_img">
