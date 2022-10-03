@@ -4,8 +4,14 @@
   align-items: center;
   justify-content: center;
 }
+.item_page_head_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .item_page_mid_container {
   display: flex;
+  margin-top: 60px;
 }
 .item_page_mid_content {
   display: flex;
