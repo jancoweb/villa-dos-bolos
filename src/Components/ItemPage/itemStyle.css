@@ -13,7 +13,7 @@
 .arrow_back:hover {
   cursor: pointer;
 }
-.item_page_head_img {
+.item_page_head_img img{
   width: 600px;
 }
 .item_page_head_content {
