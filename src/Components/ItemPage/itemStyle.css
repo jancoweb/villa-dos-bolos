@@ -16,6 +16,11 @@
 .item_page_head_img img{
   width: 450px;
   margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.item_page_head_text{
+  max-width: 570px;
 }
 .item_page_head_content {
   display: flex;
